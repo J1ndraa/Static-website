@@ -1,0 +1,330 @@
+/**
+  * @Name: Project to subject ITW (University FIT VUT Brno)
+  * @Author: Halva Jindřich (xhalva05)
+  * @Date: 2024/04/26
+  * @File: style.css
+  * @Brief: This is a main CSS file for the project.
+  *
+***********************************************************************************/
+
+
+/* Global Styles */
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+/* Remove links decorations */
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+body{
+    background-color: #090217;
+    position: relative;
+    min-width: 375px;
+}
+
+/* Add logo to background */
+body::after {
+    content: url("../img/logo.png");
+    position: absolute;
+    top: 50em;
+    right: 2em;
+}
+
+/* Add logo to background */
+body::before {
+    content: url("../img/logo.png");
+    position: absolute;
+    top: 140em;
+    left: 2em;
+}
+
+/* Container for whole page */
+#container {
+    display: grid;
+}
+
+/* Header **************************************************************************/
+
+/* header with background image */
+header {
+    background-color: black;
+    background-image: url("../img/chad.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-attachment:fixed;
+    float: left;
+    box-shadow: black 0px 0px 15px;
+    z-index: 10;
+    height: 100vh;
+    position: relative;
+}
+
+/* Title */
+header h1 {
+    display: inline-block;
+    color: white;
+    opacity: 0.7;
+    font-size: 4em;
+    font-family: "Poppins", sans-serif;
+    margin-left: 20px;
+    text-shadow: black 5px 5px 10px;
+}
+
+header h1 a{
+    color: white;
+    text-decoration: none;
+}
+
+header h1:hover {
+    text-shadow: black 10px 10px 10px;
+    opacity: 0.9;
+    transition: ease 0.3s;
+}
+
+
+/* Navigation **********************************************************************/
+
+/* navba fixed at the bottom, and its above everything (layers) */
+nav {
+    position: fixed;
+    padding-bottom: 1em;
+    padding-top: 1em;
+    background-color: black;
+    opacity: 0.9;
+    width: 100%;
+    bottom: 0;
+    z-index: 10;
+}
+
+nav a {
+    color: white;
+    opacity: 0.8;
+    font-size: 1em;
+}
+
+nav a:hover {
+    opacity: 1;
+    text-shadow: white 0px 0px 1px;
+}
+
+nav:hover {
+    opacity: 1;
+    transition: 0.5s ease;
+}
+
+nav ul{
+    list-style-type: none;
+    text-align: center;
+}
+
+/* inline menu */
+nav ul li{
+    display: inline;
+    margin-right: 0.6em;
+    margin-left: 0.6em;
+}
+
+/* About (Úvod) **********************************************************************/
+
+#uvod {
+    margin: 0 auto;
+    padding: 2em;
+    background-color: #1f1f1f;
+    color: white;
+    opacity: 0.8;
+    box-shadow: black 0px 0px 10px;
+    border-radius: 5px;
+    z-index: 3;
+}
+
+#uvod:hover {
+    opacity: 1;
+    transition: 0.3s ease transform;
+    transform: scale(1.03);
+}
+
+#uvod h2 {
+    margin-top: 0em;
+    color: white
+}
+
+/* Main *****************************************************************************/
+/* this is the "text part"  */
+
+main {
+    padding-bottom: 14em;
+    padding-top: 1em;
+    margin: 0 auto;
+    background-color: white;
+    max-width: 1200px;
+    box-shadow: black 0px 0px 10px;
+    border-radius: 5px;
+    z-index: 2;
+}
+
+/* second level of heading */
+main h2 {
+    margin: 1em 0;
+    color: #12043d;
+    opacity: 1;
+}
+
+main h2:hover {
+    text-shadow: black 0px 0px 1px;
+}
+
+/* third level of heading */
+main h3 {
+    margin: 1em 0;
+    color: #12043d;
+    opacity: 0.7;
+    font-size: 1.1em;
+}
+
+main h3:hover {
+    text-shadow: black 0px 0px 1px;
+}
+
+/* youtube references */
+main a {
+    margin: 0em 0.5em;
+    color: #12043d;
+    opacity: 0.8;
+    float: right;
+    font-size: 1.2em;
+}   
+
+main a:link {
+    color: black;
+}
+
+main a:visited {
+    color: black;
+}
+
+/* add youtube icon from Font Awesome */
+main a::before{
+    padding-right: 0.5em;
+    content: "\f167";
+    font-family: FontAwesome;
+    color: red;
+}
+
+main a:hover {
+    opacity: 1;
+    transform: scale(1.03);
+    text-shadow: black 0px 0px 1px;
+}
+
+/* padding of text in main box */
+main .text {
+    padding-left: 1.2em;
+    padding-right: 1.2em;
+}
+
+/* let the image break the width format of main box */
+img {
+    transform: scale(1.1);
+    box-shadow: black 0px 0px 5px;
+}
+
+img:hover {
+box-shadow: black 0px 0px 10px;
+}
+
+/* Footer ***************************************************************************/
+
+footer {
+    background-color: black;
+    padding: 1em;
+    color: white;
+    position: absolute;
+    bottom: 0px;
+    text-align: center;
+    height: 10em;
+    box-shadow: black 0px 0px 15px;
+    margin-bottom: 3.5em;
+    z-index: 3;
+}
+
+footer ul{
+    list-style-type: none;
+    display: block;
+}
+
+footer a {
+    color: black;
+    opacity: 0.65;
+}
+
+footer a:hover {
+    opacity: 1;
+    transform: scale(1.9);
+    transition: 0.3s ease transform;
+}
+
+/* hover over footer part */
+footer:hover h2{
+    text-shadow: none;
+    color: white;
+    transition: ease 0.3s;
+}
+
+footer:hover a{
+    color: white;
+    text-shadow: none;
+    opacity: 1;
+    transition: ease 0.3s;
+}
+
+/* social sites icons grows */
+footer i {
+    transform: scale(1.5);
+}
+
+footer i:hover{
+    transform: scale(1.7);
+    transition: 0.2s ease transform;
+}
+
+/* grid for contact section */
+#footer-content {
+    display: grid;
+    justify-items: center;
+    gap: 1em;
+    padding-top: 1em;
+}
+
+/* social sites icons in a row and only shadows of them */
+footer #social-sites ul li {
+    float: left;
+    margin: 0 1em;
+    text-shadow: white 0px 0px 0.18em;
+}
+
+#mail-tel a:link {
+    color: white;   
+}
+
+/* END *****************************************************************************/
